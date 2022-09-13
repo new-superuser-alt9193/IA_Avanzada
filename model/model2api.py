@@ -5,14 +5,12 @@ import pandas as pd
 
 def generateModel():
     df = pd.read_csv("../data/train_user_collapsed_small_data.csv")
-    x = df.drop(columns=['customer_ID', 'target'])
+    x = df.drop(columns=['customer_ID','Unnamed: 0','target'])
     y = df['target']
-
     x_train, x_test, y_train, y_test = train_test_split(x,y, test_size= 0.25, random_state= 1)
-
     clf = MLPClassifier(hidden_layer_sizes=(80, 65), max_iter=250, activation = 'relu', solver = 'adam', random_state=1, learning_rate_init= 0.001)
 
-    clf.fit(x_test, y_test)
+    clf.fit(x_test.values, y_test)
 
     return clf
 
