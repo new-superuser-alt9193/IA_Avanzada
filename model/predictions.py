@@ -1,6 +1,6 @@
-import model2api
+from joblib import load
 
-model = model2api.generateModel()
+model = load('trainedModel.joblib')
 
 def makePrediction(X):
     y_pred = model.predict(X)

@@ -1,9 +1,10 @@
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import train_test_split
+from joblib import dump
 import pandas as pd
 
 def generateModel():
-    df = pd.read_csv('../data/train_user_collapsed_small_data.csv')
+    df = pd.read_csv("../data/train_user_collapsed_small_data.csv")
     x = df.drop(columns=['customer_ID', 'target'])
     y = df['target']
 
@@ -14,3 +15,7 @@ def generateModel():
     clf.fit(x_test, y_test)
 
     return clf
+
+clf = generateModel()
+dump(clf, './trainedModel.joblib')
+
