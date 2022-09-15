@@ -11,6 +11,8 @@
 # Apendices
 - **[Implementacion](http://ec2-44-209-10-17.compute-1.amazonaws.com/)**
 - **[Demostracion interfaz](https://youtu.be/_znqc8ailR8)**
+- **[Repositorio frontend](https://github.com/alexlohe25/Despliegue_IA_I_front)**
+- **[Repositorio backend](https://github.com/new-superuser-alt9193/IA_Backend)**
 
 # Correcciones 14/09/2022
 - Seguir el formato CRISP-DM
